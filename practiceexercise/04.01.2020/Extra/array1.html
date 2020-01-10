@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Array Demo</title>
+    </head>
+    
+<body>
+    <center>
+    <h1>List of Names</h1>    
+    <table border="2">
+        <thead>
+            <th>Sr. No</th>
+            <th>Name</th>
+        </thead>
+        
+        <tbody>
+            <script src="array1.js"></script>
+        </tbody>
+
+    </table>
+
+    <br><br>
+
+    <form>
+    <table>
+        <tr>
+            <td>Add a Name: </td>
+            <td><input type="text" id="txtAddName" placeholder="Enter Name" onblur="addName(name.value)" #name></td>
+        </tr>
+        <tr>
+            <td>Delete a Name: </td>
+            <td><input type="text" id="txtDeleteName" placeholder="Enter Name" onblur="deleteName()"></td>
+        </tr>
+        
+    </form>
+    </table>
+    </center>
+</body>
+</html>

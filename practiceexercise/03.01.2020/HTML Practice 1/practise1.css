@@ -1,0 +1,25 @@
+img{
+    width:215;
+    height:315;
+}
+
+table{
+    border-spacing: 24px;
+}
+
+td{
+    background-color: rgb(219, 219, 219);
+    border:1px solid black;
+    text-align: center;
+    padding: 4px;
+    color: rgb(129, 128, 128);
+}
+
+p{
+    color: rgb(129, 128, 128);
+    text-align: center;
+    padding-left: 265px;
+    padding-right: 265px;
+}
+
+

@@ -1,0 +1,16 @@
+.forms
+{
+    float: left;
+}
+
+.legends
+{
+    font-family: monospace;
+}
+
+.userInfo
+{
+    align-items: center;
+    width: 20%;
+    height: 50%;
+}

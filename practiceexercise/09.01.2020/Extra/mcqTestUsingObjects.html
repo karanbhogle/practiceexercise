@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="mcqTest.css">
+</head>
+<body onload="setQuestion()">
+<center>
+    <div class="container">
+    <table>
+        <caption><h1>CAR'S KNOWLEDGE TEST</h1></caption>
+        <form>
+            
+            <tr>
+                <td><h3><label id="question"></label></h3></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="option1"> <label class="option" id="option1Value"></label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="option2"> <label class="option" id="option2Value"></label class="option"></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="option3"> <label class="option" id="option3Value"></label class="option"></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="option4"> <label class="option" id="option4Value"></label class="option"></td>
+            </tr>
+            <tr>
+                <td><center><button id="submit" onclick="submitAnswer()">Submit and Proceed to Next</button></center></td>
+            </tr>
+        </form>
+    </table>
+    </div>
+    <footer><b><br><br>Note:</b> Once the answer to a question is submitted, you cannot answer again.</footer>
+</center>
+
+
+
+
+
+<script src="mcqTestUsingObjects.js"></script>
+</body>
+</html>

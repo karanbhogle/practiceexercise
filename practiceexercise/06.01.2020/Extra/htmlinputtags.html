@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>HTML Input tags</title>
+        <style>
+            input[type="submit"],input[type="reset"]{
+                width:50%;
+                border-radius: 8px;
+                color:white;
+                background-color: red;
+                padding: 10px;
+            }
+            input[type="submit"]:hover,input[type="reset"]:hover{
+                border-radius: 5%;
+                color:red;
+                background-color: white;
+                border:2px solid red;
+            }
+        </style>
+
+        <script>
+            
+            function setBGColor()
+            {
+                backgroundColor = document.getElementById('bgcolor').value;
+                mybody = document.getElementById('body');
+                td = document.getElementsByClassName("txt");
+
+                mybody.style.background = backgroundColor;
+
+                invertedColor = invertColor(backgroundColor);
+                td.style.color = invertedColor;
+
+                alert(backgroundColor + "   " +invertedColor);
+            }
+
+            function invertColor(hex) {
+                if (hex.indexOf('#') === 0) {
+                    hex = hex.slice(1);
+                }
+                // convert 3-digit hex to 6-digits.
+                if (hex.length === 3) {
+                    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+                }
+                if (hex.length !== 6) {
+                    throw new Error('Invalid HEX color.');
+                }
+                // invert color components
+                var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+                    g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+                    b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+                // pad each with zeros and return
+                return '#' + padZero(r) + padZero(g) + padZero(b);
+            }
+
+            function padZero(str, len) {
+                len = len || 2;
+                var zeros = new Array(len).join('0');
+                return (zeros + str).slice(-len);
+            }
+
+
+        </script>
+    </head>
+<body id="body">
+
+<fieldset>
+<legend>Personal Details</legend>
+<table>
+    <tr>
+        <td>Enter Name:</td>
+        <td><input type="text" name="txtName"></td>
+    </tr>
+    <tr>
+        <td>Enter Email:</td>
+        <td><input type="email" name="txtEmail"></td>
+    </tr>
+    <tr>
+        <td>Enter DOB:</td>
+        <td><input type="date" name="dateDOB"></td>
+    </tr>
+    <tr>
+        <td>Enter Password:</td>
+        <td><input type="password" name="txtPassword"></td>
+    </tr>
+    <tr>
+        <td>Choose a Profile Picture:</td>
+        <td><input type="file" name="filePic"></td>
+    </tr>
+    <tr>
+        <td>How many cars do you own?</td>
+        <td><input type="number" min="0" max="10" value="0" name="txtName"></td>
+    </tr>
+    <tr>
+        <td>Select Gender:</td>
+        <td><input type="radio" name="radioGender" value="male"> Male 
+            <input type="radio" name="radioGender" value="female"> Female</td>
+    </tr>
+    <tr>
+        <td>Select City:</td>
+        <td>
+            <select name="selectcity">
+                <option selected>--------</option>
+                <option>Ahmedabad</option>
+                <option>Vadodara</option>
+                <option>Gandhinagar</option>
+                <option>Surat</option>
+                <option>Navsari</option>
+                <option>Vapi</option>
+                <option>Rajkot</option>
+                <option>Bhavnagar</option>
+                <option>Idar</option>
+                <option>Surendranagar</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Select Hobbies:</td>
+        <td><input type="checkbox" name="hobbie" value="singing"> Singing 
+            <input type="checkbox" name="hobbie" value="dancing"> Dancing 
+            <input type="checkbox" name="hobbie" value="reading"> Reading 
+            <input type="checkbox" name="hobbie" value="listeningmusic"> Listening Music 
+            <input type="checkbox" name="hobbie" value="surfingnet"> Surfing Net
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Address:</td>
+        <td><textarea cols="70" rows="5"></textarea></td>
+    </tr>
+    <tr>
+        <td>Enter Background Color:</td>
+        <td><input type="color" id="bgcolor" onchange="setBGColor()"></td>
+    </tr>
+    </table>
+    </fieldset>
+
+    <br>
+    <fieldset>
+    <legend>Educational Details</legend>
+    <table>
+    
+    <tr>
+        <td>Start-End Class 10<sup>th</sup>:</td>
+        <td>From <input type="month" name="start10"> to <input type="month" name="end10"></td>
+    </tr>
+    <tr>
+        <td>Class 10 Percentage:</td>
+        <td><input type="text" name="class10percentage"><br></td>
+    </tr>
+    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+    <tr>
+        <td>Start-End Class 12<sup>th</sup>:</td>
+        <td>From <input type="month" name="start12"> to <input type="month" name="end12"></td>
+    </tr>
+    <tr>
+        <td>Class 12 Percentage</td>
+        <td><input type="text" name="class12percentage"></td>
+    </tr>
+    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+    <tr>
+        <td>Start-End Graduation:</td>
+        <td>From <input type="month" name="startgraduation"> to <input type="month" name="endgraduation"></td>
+    </tr>
+    <tr>
+        <td>Graduation Percentage:</td>
+        <td><input type="text" name="gradpercentage"></td>
+    </tr>
+    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+    <tr>
+        <td>Start-End PostGraduation:</td>
+        <td><input type="month" name="startpgraduation"><input type="month" name="endpgraduation"></td>
+    </tr>
+    <tr>
+        <td>PostGraduation Percentage:</td>
+        <td><input type="text" name="gradpercentage"></td>
+    </tr>
+</table>
+</fieldset>
+
+<table>
+    <tr>
+        <td colspan="2">
+            <input type="submit" name="submit" value="Submit Now!">
+            <input type="reset" name="reset">
+        </td>
+    </tr>    
+</table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <title>Login:Registration</title>
+    <link rel="stylesheet" href="extra2.css">
+    <script src="extra2.js"></script>
+
+</head>
+<body>
+
+<div class="forms">
+    <fieldset>
+    <legend><font class="legends">Login Here</font></legend>
+    <table>
+        <form name="loginForm">
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="txtLoginEmail" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="txtLoginPassword" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="button" onclick="loginCheck()" value="Login"></center></td>
+        </tr>
+        </form>
+    </table>
+    </fieldset>
+</div>
+
+<div class="forms">
+    <fieldset>
+    <legend><font class="legends">Register With Us</font></legend>
+    <table>
+        <form name="registrationForm">
+        <tr>
+            <td>Enter Firstname:</td>
+            <td><input type="text" name="txtFirstName"></td>
+        </tr>
+        <tr>
+            <td>Enter Lastname:</td>
+            <td><input type="text" name="txtLastName"></td>
+        </tr>
+        <tr>
+            <td>Enter Contact:</td>
+            <td><input type="text" name="txtContact"></td>
+        </tr>
+        <tr>
+            <td>Enter Email:</td>
+            <td><input type="email" name="txtEmail" ></td>
+        </tr>
+        <tr>
+            <td>Enter Password:</td>
+            <td><input type="password" name="txtPassword"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="button" onclick="validate()" value="Register Now"></center></td>
+        </tr>
+    </form>
+    </table>
+    </fieldset>
+</div>
+
+<div class="userInfo">
+
+</div>
+
+</body>
+</html>

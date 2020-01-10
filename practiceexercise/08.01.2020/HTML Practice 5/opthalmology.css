@@ -1,0 +1,48 @@
+th
+{
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-bottom: 6px double black;
+}
+
+table
+{
+    border: 6px double black;
+    border-spacing: 0px;
+    border-bottom: 1px solid black;
+}
+
+td
+{
+    border: 1px solid black;
+    padding-top: 6px;
+    padding-left: 4px;
+}
+
+.company
+{
+    font-weight: bold;
+    width: 100px;
+    background-color: lightskyblue;
+}
+
+.collaborators
+{
+    width: 140px;
+}
+.celltype
+{
+    width: 90px;
+    background-color: lightpink;
+}
+
+.applications
+{
+    width: 120px;
+    background-color: lightyellow;
+}
+
+caption
+{
+    font-weight: 1000;
+}

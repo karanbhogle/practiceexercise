@@ -1,0 +1,34 @@
+.maincontainer
+{
+    width : 90%;
+    text-align: center;
+    background: coral;
+    margin: 100px;
+    height: 600px;
+}
+
+.allbuttons
+{
+    text-align: center;
+    padding-top: 500px;
+}
+
+.player-0
+{
+    background: darkblue;
+    float: left;
+    width: 600px;
+    height: 400px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.player-1
+{
+    background: darkblue;
+    float: right;
+    width: 600px;
+    height: 400px;
+    margin-right: 80px;
+    margin-top: 50px;
+}
